@@ -147,6 +147,9 @@ const ProgressDiv = styled.div`
 `
 const Progress = styled(LinearProgress)`
   && {
+    width: 200px;
+    display: inline-block;
+    margin-right: 10px;
     background-color: #F2F2F2;
     color: white;
     bar-root: {
@@ -232,15 +235,18 @@ const Home = () => {
                   <h4>YEARLY GOALS</h4>
                   <ProgressDiv>
                     <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Progress variant="determinate" value={76} />
+                    <Progress variant="determinate" value={22} />
+                    <span>22%</span>
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 2</SecondaryGoal>
+                    <Progress variant="determinate" value={50} />
+                    <span>50%</span>
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                  <ProgressDiv>
-                    <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
+                    <Progress variant="determinate" value={60} />
+                    <span>60%</span>
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
@@ -261,14 +267,17 @@ const Home = () => {
                       <ProgressDiv>
                         <PrimaryGoal>goal number 1</PrimaryGoal>
                         <Progress variant="determinate" value={76} />
+                        <span>76%</span>
                       </ProgressDiv>
                       <ProgressDiv>
-                        <SecondaryGoal>goal number 1</SecondaryGoal>
-                        <Progress variant="determinate" value={76} />
+                        <SecondaryGoal>goal number 2</SecondaryGoal>
+                        <Progress variant="determinate" value={88} />
+                        <span>88%</span>
                       </ProgressDiv>
                       <ProgressDiv>
-                        <SecondaryGoal>goal number 1</SecondaryGoal>
-                        <Progress variant="determinate" value={76} />
+                        <SecondaryGoal>goal number 3</SecondaryGoal>
+                        <Progress variant="determinate" value={50} />
+                        <span>50%</span>
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -280,15 +289,18 @@ const Home = () => {
                       <h4>MONTHLY GOALS</h4>
                       <ProgressDiv>                    
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Progress variant="determinate" value={76} />
+                        <Progress variant="determinate" value={12} />
+                        <span>12%</span>
                       </ProgressDiv>
                       <ProgressDiv>
-                        <SecondaryGoal>goal number 1</SecondaryGoal>
-                        <Progress variant="determinate" value={76} />
+                        <SecondaryGoal>goal number 2</SecondaryGoal>
+                        <Progress variant="determinate" value={20} />
+                        <span>20%</span>
                       </ProgressDiv>
                       <ProgressDiv>
-                        <SecondaryGoal>goal number 1</SecondaryGoal>
-                        <Progress variant="determinate" value={76} />
+                        <SecondaryGoal>goal number 3</SecondaryGoal>
+                        <Progress variant="determinate" value={90} />
+                        <span>90%</span>
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
