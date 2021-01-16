@@ -7,6 +7,7 @@ import { StylesProvider } from '@material-ui/core/styles';
 const Content = styled.div`
   && {
     padding: 0 3% 0 3%;
+    height: 100vh;
   }
 `
 const Name = styled.h2`
@@ -40,8 +41,10 @@ const Headerline = styled.hr`
 const Widget = styled(Card)`
   && {
     width: 100%;
-    height: 300px;
+    height: 40vh;
     text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 `
 const cardTitle = styled.p`
