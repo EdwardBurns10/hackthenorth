@@ -3,11 +3,11 @@ import styles from '../styles/Home.module.css'
 import styled from "styled-components"
 import { Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 const Content = styled.div`
   && {
     padding: 0 3% 0 3%;
-    //height: 100vh;
   }
 `
 const Name = styled.h2`
@@ -41,12 +41,13 @@ const Headerline = styled.hr`
 const Widget1 = styled(Card)`
   && {
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     text-align: center;
     margin-top: 3px;
     margin-bottom: 3px;
-    padding: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
     h3 {
+      margin-top: 0px;
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 5px;
@@ -69,8 +70,9 @@ const Widget2 = styled(Card)`
     text-align: center;
     margin-top: 3px;
     margin-bottom: 3px;
-    padding: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
     h3 {
+      margin-top: 0px;
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 5px;
@@ -105,6 +107,39 @@ const FiveYearGoal = styled.div`
     }
   }
 `
+const ProgressDiv = styled.div`
+  && {
+    text-align: left;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+  }
+`
+const Progress = styled(LinearProgress)`
+  && {
+    background-color: #F2F2F2;
+    color: white;
+    bar-root: {
+      background-color: white,
+    }
+  }
+`
+const PrimaryGoal = styled.body`
+  && {
+    color: #FF9900;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+`
+const SecondaryGoal = styled.body`
+  && {
+    color: #8673FF;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+`
 const Home = () => {
   return (
     <Content>
@@ -122,7 +157,7 @@ const Home = () => {
       </Header>
       <Headerline></Headerline>
         <div>
-          <Grid container direction="row" justify="center" alignItems="center" spacing={2}>
+          <Grid container direction="row" justify="center" alignItems="top" spacing={2}>
             <Grid item xs={3}>
               <Widget1 style={{ backgroundColor: "#F2F2F2"}}>
                 <CardContent>
@@ -136,6 +171,18 @@ const Home = () => {
                 <CardContent>
                   <h3>2021 goals</h3>
                   <h4>YEARLY GOALS</h4>
+                  <ProgressDiv>
+                    <PrimaryGoal>goal number 1</PrimaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
                 </CardContent>
               </Widget1>
             </Grid>
@@ -144,6 +191,18 @@ const Home = () => {
                 <CardContent>
                   <h3>Q1 (jan-mar)</h3>
                   <h4>QUARTERLY GOALS</h4>
+                  <ProgressDiv>
+                    <PrimaryGoal>goal number 1</PrimaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
                 </CardContent>
               </Widget1>
             </Grid>
@@ -152,6 +211,18 @@ const Home = () => {
                 <CardContent>
                   <h3>january</h3>
                   <h4>MONTHLY GOALS</h4>
+                  <ProgressDiv>                    
+                    <PrimaryGoal>goal number 1</PrimaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
+                  <ProgressDiv>
+                    <SecondaryGoal>goal number 1</SecondaryGoal>
+                    <Progress variant="determinate" value={76} />
+                  </ProgressDiv>
                 </CardContent>
               </Widget1>
             </Grid>
@@ -194,6 +265,7 @@ const Home = () => {
               <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
                 <CardContent>
                   <h3>today's tasks</h3>
+                  <h4>DAILY TO-DO'S</h4>
                 </CardContent>
               </Widget2>
             </Grid>
