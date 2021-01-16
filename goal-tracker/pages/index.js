@@ -147,7 +147,7 @@ const ProgressDiv = styled.div`
 `
 const Progress = styled(LinearProgress)`
   && {
-    width: 200px;
+    width: 80%;
     display: inline-block;
     margin-right: 10px;
     background-color: #F2F2F2;
