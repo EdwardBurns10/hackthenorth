@@ -15,6 +15,7 @@ const Name = styled.h2`
     font-size: 20px;
     position: absolute;
     left: 0;
+    color: black;
   }
 `
 const Subtitle = styled.p`
@@ -23,6 +24,7 @@ const Subtitle = styled.p`
     position: absolute;
     left: 0;
     padding-top: 35px;
+    color: black;
   }
 `
 const Header = styled.div`

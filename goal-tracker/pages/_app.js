@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     }
     h1 {
         font-size: 30px;
+        color: black;
         margin: 0 auto;
         text-align: center;
         padding-top: 15px;
