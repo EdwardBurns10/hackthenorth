@@ -41,7 +41,7 @@ const Headerline = styled.hr`
 const Widget1 = styled(Card)`
   && {
     width: 100%;
-    min-height: 30vh;
+    //min-height: 20vh;
     text-align: center;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -66,10 +66,36 @@ const Widget1 = styled(Card)`
 const Widget2 = styled(Card)`
   && {
     width: 100%;
-    min-height: 50vh;
+    min-height: 55vh;
     text-align: center;
-    margin-top: 3px;
+    margin-top: 14px;
     margin-bottom: 3px;
+    padding: 0 5px 0 5px;
+    h3 {
+      margin-top: 0px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    h4 {
+      margin-top: 0px;
+      font-size: 11px;
+      color: #8A8A8A;
+    }
+    p {
+      font-size: 18px;
+      color: #8A8A8A;
+    }
+  }
+`
+const Widget3 = styled(Card)`
+  && {
+    min-height: 55vh;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
     padding: 0 5px 0 5px;
     h3 {
       margin-top: 0px;
@@ -165,6 +191,37 @@ const Home = () => {
                   <p>brief powerful statement that inspires and guides you on your path through life.</p>
                 </CardContent>
               </Widget1>
+              <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
+                  <CardContent>
+                    <h3>5 year goals</h3>
+                    <div style={{paddingTop:"10px"}}>
+                      <FiveYearGoal>
+                        <h4>MOST IMPORTANT</h4>
+                        <ul>
+                          <li>a very important goal</li>
+                          <li>another very important goal</li>
+                          <li>something you really want</li>
+                        </ul>
+                      </FiveYearGoal>
+                      <FiveYearGoal>
+                        <h4>IMPORTANT</h4>
+                        <ul>
+                          <li>a important goal</li>
+                          <li>another important goal</li>
+                          <li>something you want</li>
+                        </ul>
+                      </FiveYearGoal>
+                      <FiveYearGoal>
+                        <h4>LESS IMPORTANT</h4>
+                        <ul>
+                          <li>something nice to achieve</li>
+                          <li>another nice-to-have</li>
+                          <li>something you kinda want</li>
+                        </ul>
+                      </FiveYearGoal>
+                    </div>
+                  </CardContent>
+                </Widget2>
             </Grid>
             <Grid item xs={3}>
               <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
@@ -185,83 +242,6 @@ const Home = () => {
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
-            </Grid>
-            <Grid item xs={3}>
-              <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
-                <CardContent>
-                  <h3>Q1 (jan-mar)</h3>
-                  <h4>QUARTERLY GOALS</h4>
-                  <ProgressDiv>
-                    <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                  <ProgressDiv>
-                    <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                  <ProgressDiv>
-                    <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                </CardContent>
-              </Widget1>
-            </Grid>
-            <Grid item xs={3}>
-              <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
-                <CardContent>
-                  <h3>january</h3>
-                  <h4>MONTHLY GOALS</h4>
-                  <ProgressDiv>                    
-                    <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                  <ProgressDiv>
-                    <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                  <ProgressDiv>
-                    <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={76} />
-                  </ProgressDiv>
-                </CardContent>
-              </Widget1>
-            </Grid>
-          </Grid>
-          <Grid container direction="row" justify="center" alignItems="top" spacing={2}>
-            <Grid item xs={3}>
-              <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
-                <CardContent>
-                  <h3>5 year goals</h3>
-                  <div style={{paddingTop:"10px"}}>
-                    <FiveYearGoal>
-                      <h4>MOST IMPORTANT</h4>
-                      <ul>
-                        <li>a very important goal</li>
-                        <li>another very important goal</li>
-                        <li>something you really want</li>
-                      </ul>
-                    </FiveYearGoal>
-                    <FiveYearGoal>
-                      <h4>IMPORTANT</h4>
-                      <ul>
-                        <li>a important goal</li>
-                        <li>another important goal</li>
-                        <li>something you want</li>
-                      </ul>
-                    </FiveYearGoal>
-                    <FiveYearGoal>
-                      <h4>LESS IMPORTANT</h4>
-                      <ul>
-                        <li>something nice to achieve</li>
-                        <li>another nice-to-have</li>
-                        <li>something you kinda want</li>
-                      </ul>
-                    </FiveYearGoal>
-                  </div>
-                </CardContent>
-              </Widget2>
-            </Grid>
-            <Grid item xs={3}>
               <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
                 <CardContent>
                   <h3>today's tasks</h3>
@@ -270,12 +250,58 @@ const Home = () => {
               </Widget2>
             </Grid>
             <Grid item xs={6}>
-              <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
-                <CardContent>
-                  <h3>week's schedule</h3>
-                </CardContent>
-              </Widget2>
-            </Grid>
+              <Grid container direction="row" justify="center" alignItems="top" spacing={2}>
+                <Grid item xs={6}>
+                  <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
+                    <CardContent>
+                      <h3>Q1 (jan-mar)</h3>
+                      <h4>QUARTERLY GOALS</h4>
+                      <ProgressDiv>
+                        <PrimaryGoal>goal number 1</PrimaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                      <ProgressDiv>
+                        <SecondaryGoal>goal number 1</SecondaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                      <ProgressDiv>
+                        <SecondaryGoal>goal number 1</SecondaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                    </CardContent>
+                  </Widget1>
+                </Grid>
+                <Grid item xs={6}>
+                  <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
+                    <CardContent>
+                      <h3>january</h3>
+                      <h4>MONTHLY GOALS</h4>
+                      <ProgressDiv>                    
+                        <PrimaryGoal>goal number 1</PrimaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                      <ProgressDiv>
+                        <SecondaryGoal>goal number 1</SecondaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                      <ProgressDiv>
+                        <SecondaryGoal>goal number 1</SecondaryGoal>
+                        <Progress variant="determinate" value={76} />
+                      </ProgressDiv>
+                    </CardContent>
+                  </Widget1>
+                </Grid>
+                <Grid container direction="row" justify="center" alignItems="top" spacing={0}>
+                  <Grid item xs={12}>
+                    <Widget3 style={{ backgroundColor: "#F2F2F2" }}>
+                      <CardContent>
+                        <h3>week's schedule</h3>
+                      </CardContent>
+                    </Widget3>
+                  </Grid>
+                </Grid>
+              </Grid>
+              </Grid>
           </Grid>
         </div>
       </StylesProvider>
