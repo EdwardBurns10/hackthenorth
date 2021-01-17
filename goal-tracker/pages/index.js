@@ -70,7 +70,7 @@ const Widget1 = styled(Card)`
 const Widget2 = styled(Card)`
   && {
     width: 100%;
-    min-height: 55vh;
+    min-height: 60vh;
     text-align: center;
     margin: 3px 0px 3px 0px;
     //padding: 0 5px 0 5px;
@@ -270,7 +270,7 @@ const Home = () => {
         <div>
           <Grid container direction="row" justify="center" alignItems="baseline" spacing={2}>
             <Grid item xs={3}>
-              <Widget1 style={{ backgroundColor: "#F2F2F2"}}>
+              <Widget1 style={{ backgroundColor: "#FFECD0"}}>
                 <CardContent>
                   <h3>personal mission</h3>
                   {/* <p>brief powerful statement that inspires and guides you on your path through life.</p> */}
@@ -299,7 +299,7 @@ const Home = () => {
                 </Editable>
                 </CardContent>
               </Widget1>
-              <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
+              <Widget2 style={{ backgroundColor: "#FFECD0" }}>
                   <CardContent>
                     <h3>5 year goals</h3>
                     <div style={{paddingTop:"10px"}}>
@@ -332,7 +332,7 @@ const Home = () => {
                 </Widget2>
             </Grid>
             <Grid item xs={3}>
-              <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
+              <Widget1 style={{ backgroundColor: "#FFECD0" }}>
                 <CardContent>
                   <h3>2021 goals</h3>
                   <h4>YEARLY GOALS</h4>
@@ -350,7 +350,7 @@ const Home = () => {
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
-              <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
+              <Widget2 style={{ backgroundColor: "#FFECD0" }}>
                 <CardContent>
                   <h3>today's tasks</h3>
                   <h4>DAILY TO-DO'S</h4>
@@ -360,7 +360,7 @@ const Home = () => {
             <Grid item xs={6}>
               <Grid container direction="row" justify="center" alignItems="baseline" spacing={2}>
                 <Grid item xs={6}>
-                  <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
+                  <Widget1 style={{ backgroundColor: "#FFECD0" }}>
                     <CardContent>
                       <h3>Q1 (jan-mar)</h3>
                       <h4>QUARTERLY GOALS</h4>
@@ -380,7 +380,7 @@ const Home = () => {
                   </Widget1>
                 </Grid>
                 <Grid item xs={6}>
-                  <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
+                  <Widget1 style={{ backgroundColor: "#FFECD0" }}>
                     <CardContent>
                       <h3>january</h3>
                       <h4>MONTHLY GOALS</h4>
@@ -401,7 +401,7 @@ const Home = () => {
                 </Grid>
                 <Grid container direction="row" justify="center" alignItems="baseline" spacing={2} style={{paddingTop:"5px"}}>
                   <Grid item xs={12}>
-                    <Widget3 style={{ backgroundColor: "#F2F2F2" }}>
+                    <Widget3 style={{ backgroundColor: "#FFECD0" }}>
                       <CardContent>
                         <h3>week's schedule</h3>
                         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=MmFtOXV0Z2g4ZXIzN2NndThrb2hrdHB2MmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F6BF26" styles={{border:"solid 1px #777", paddingTop:"10px"}} width="100%" height="400" frameborder="0" scrolling="no"></iframe>
