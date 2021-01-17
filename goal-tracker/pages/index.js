@@ -94,9 +94,9 @@ const Widget3 = styled(Card)`
   && {
     min-height: 55vh;
     text-align: center;
-    margin-top: 4px;
-    margin: 3px 12px 3px 12px;
-    //padding: 0 5px 0 5px;
+    margin-top: 15px;
+    margin: 3px 8px 3px 8px;
+    padding: 0 5px 0 5px;
     h3 {
       margin-top: 0px;
       font-size: 18px;
@@ -136,7 +136,7 @@ const ProgressDiv = styled.div`
   && {
     text-align: left;
     background-color: white;
-    padding: 2px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     margin: 10px 0;
     border-radius: 5px;
   }
@@ -157,7 +157,6 @@ const Progress = styled(LinearProgress)`
 const PrimaryGoal = styled.text`
   && {
     color: #FF9900;
-    //margin-left: 0px;
     font-size: 12px;
     margin-bottom: 2px;
   }
@@ -165,7 +164,6 @@ const PrimaryGoal = styled.text`
 const SecondaryGoal = styled.text`
   && {
     color: #8673FF;
-    //margin-left: 0px;
     font-size: 12px;
     margin-bottom: 2px;
   }
@@ -187,7 +185,7 @@ const Home = () => {
       </Header>
       <Headerline></Headerline>
         <div>
-          <Grid container direction="row" justify="center" alignItems="baseline" spacing={3}>
+          <Grid container direction="row" justify="center" alignItems="baseline" spacing={2}>
             <Grid item xs={3}>
               <Widget1 style={{ backgroundColor: "#F2F2F2"}}>
                 <CardContent>
@@ -257,7 +255,7 @@ const Home = () => {
               </Widget2>
             </Grid>
             <Grid item xs={6}>
-              <Grid container direction="row" justify="center" alignItems="baseline" spacing={3}>
+              <Grid container direction="row" justify="center" alignItems="baseline" spacing={2}>
                 <Grid item xs={6}>
                   <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
                     <CardContent>
@@ -304,7 +302,7 @@ const Home = () => {
                     </CardContent>
                   </Widget1>
                 </Grid>
-                <Grid container direction="row" justify="flex-end" alignItems="baseline" spacing={3}>
+                <Grid container direction="row" justify="center" alignItems="baseline" spacing={2} style={{paddingTop:"5px"}}>
                   <Grid item xs={12}>
                     <Widget3 style={{ backgroundColor: "#F2F2F2" }}>
                       <CardContent>
