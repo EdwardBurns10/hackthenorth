@@ -42,9 +42,9 @@ const Headerline = styled.hr`
 `
 const Widget1 = styled(Card)`
   && {
-    width: 100%;
+    //width: 100%;
     text-align: center;
-    margin: 3px 0px 3px 0px;
+    //margin: 3px 0px 3px 0px;
     //padding-right: 10px;
     //padding-left: 10px;
     //padding: 0 5px 0 5px;
@@ -121,7 +121,6 @@ const FiveYearGoal = styled.div`
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    width: 100%;
     ul {
       list-style-type: disc;
       padding-left: 25px;
@@ -140,14 +139,13 @@ const ProgressDiv = styled.div`
     padding: 5px 5px 5px 5px;
     margin: 10px 0;
     border-radius: 5px;
-    width: 100%;
   }
 `
 const Progress = styled(LinearProgress)`
   && {
     width: 80%;
     display: inline-block;
-    margin-left: 10px;
+    //margin-left: 10px;
     margin-right: 10px;
     background-color: #F2F2F2;
     color: white;
