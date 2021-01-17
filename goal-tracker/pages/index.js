@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-<<<<<<< HEAD
 import styled from "styled-components"
 import { Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
@@ -318,37 +317,8 @@ const Home = () => {
         </div>
       </StylesProvider>
     </Content>
-=======
-import {Button, Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
-import React, {useState} from "react";
-import useSWR from 'swr';
-
-const fetcher = (url) => fetch(url).then((r) => r.json());
-
-const Home = () => {
-
-    const { data, error } = useSWR('/api/dailyTasks', fetcher);
-    console.log('yo')
-    console.log(data)
-    let ummmm='test';
-
-console.log('hello')
-
-    // console.log('here')
-    // const res =  fetch('http://localhost:3000/api/dailyTasks')
-    // console.log(res)
-
-  return (
-      <div className={styles.container}>
-
-      </div>
->>>>>>> 7647e6d3af7553483978f402866850ebf78471a2
   )
 
 }
-<<<<<<< HEAD
 
 export default Home
-=======
-export default Home
->>>>>>> 7647e6d3af7553483978f402866850ebf78471a2
