@@ -299,6 +299,23 @@ const Home = () => {
     }
   ]);
   
+  const addTodo = text => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
+
+  const completeTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
+    setTodos(newTodos);
+  };
+
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+  
   const [value1, setValue1] = React.useState(30);
   const [value2, setValue2] = React.useState(10);
   const [value3, setValue3] = React.useState(0);
