@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
-import { TextField, Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
+import { Button, TextField, Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Editable from '../editable'
+import Link from 'next/link'
 
 const Content = styled.div`
   && {
@@ -17,6 +18,16 @@ const Name = styled.h2`
     font-size: 20px;
     position: absolute;
     left: 0;
+    color: black;
+  }
+`
+const Next = styled(Button)`
+  && {
+    margin-top: 15px;
+    font-size: 20px;
+    text-transform: none;
+    position: absolute;
+    right: 0;
     color: black;
   }
 `
@@ -265,6 +276,11 @@ const Home = () => {
           <Subtitle>week's productivity: 85%</Subtitle>
         </span>
         <h1>lifemapp</h1>
+        <span>
+        <Link href="/page">
+          <Next>&#8594;</Next>
+        </Link>
+        </span>
       </Header>
       <Headerline></Headerline>
         <div>

@@ -1,13 +1,24 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
-import { Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
+import { Button, Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Link from 'next/link'
 
 const Content = styled.div`
   && {
     margin: 0 3% 0 3%;
+  }
+`
+const Next = styled(Button)`
+  && {
+    margin-top: 15px;
+    font-size: 20px;
+    text-transform: none;
+    position: absolute;
+    right: 0;
+    color: black;
   }
 `
 const Name = styled.h2`
@@ -207,10 +218,15 @@ const Home = () => {
                 </Head>
                 <Header>
                     <span>
-                        <Name>hillary leung</Name>
+                        <Name>john smith</Name>
                         <Subtitle>week's productivity: 85%</Subtitle>
                     </span>
                     <h1>lifemapp</h1>
+                    <span>
+                    <Link href="/">
+                      <Next>&#8592;</Next>
+                    </Link>
+                    </span>
                 </Header>
                 <Headerline></Headerline>
                 <div>
