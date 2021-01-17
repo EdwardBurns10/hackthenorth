@@ -5,12 +5,7 @@ import styled from "styled-components"
 import { Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { Calendar as BigCalendar, momentLocalizer } from "react-big-calendar";
-import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { render } from 'react-dom';
-
-const localizer = momentLocalizer(moment);
+//import {DayPilot, DayPilotCalendar} from "daypilot-pro-react";
 
 const Content = styled.div`
   && {
@@ -164,6 +159,7 @@ const Progress = styled(LinearProgress)`
 const SliderBar = styled(Slider)`
   && {
     display: inline-block;
+    value-label-display: auto;
     margin-right: 10px;
     background-color: #F2F2F2;
     track: white;
@@ -243,6 +239,8 @@ const Home = () => {
     setValue9(newValue);
   };
 
+  const events = [{ title: "today's event", date: new Date() }];
+
   return (
     <Content>
       <StylesProvider injectFirst>
@@ -252,7 +250,7 @@ const Home = () => {
       </Head>
       <Header> 
         <span>
-          <Name>hillary leung</Name>
+          <Name>john smith</Name>
           <Subtitle>week's productivity: 85%</Subtitle>
         </span>
         <h1>lifemapp</h1>
@@ -306,15 +304,15 @@ const Home = () => {
                   <h4>YEARLY GOALS</h4>
                   <ProgressDiv>
                     <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Slider value={value1} onChange={handleChange1} aria-labelledby="continuous-slider" />
+                    <Slider style={{color: "#8A8A8A"}} value={value1} onChange={handleChange1} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 2</SecondaryGoal>
-                    <Slider value={value2} onChange={handleChange2} aria-labelledby="continuous-slider" />
+                    <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value2} onChange={handleChange2} aria-labelledby="continuous-slider" valueLabelDisplay="auto"/>
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 3</SecondaryGoal>
-                    <Slider value={value3} onChange={handleChange3} aria-labelledby="continuous-slider" />
+                    <Slider style={{color: "#8A8A8A"}} value={value3} onChange={handleChange3} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
@@ -334,15 +332,15 @@ const Home = () => {
                       <h4>QUARTERLY GOALS</h4>
                       <ProgressDiv>
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider value={value4} onChange={handleChange4} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value4} onChange={handleChange4} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider value={value5} onChange={handleChange5} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value5} onChange={handleChange5} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider value={value6} onChange={handleChange6} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value6} onChange={handleChange6} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -354,15 +352,15 @@ const Home = () => {
                       <h4>MONTHLY GOALS</h4>
                       <ProgressDiv>                    
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider value={value7} onChange={handleChange7} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value7} onChange={handleChange7} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider value={value8} onChange={handleChange8} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value8} onChange={handleChange8} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider value={value9} onChange={handleChange9} aria-labelledby="continuous-slider" />
+                        <Slider style={{color: "#8A8A8A"}} value={value9} onChange={handleChange9} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -372,6 +370,7 @@ const Home = () => {
                     <Widget3 style={{ backgroundColor: "#F2F2F2" }}>
                       <CardContent>
                         <h3>week's schedule</h3>
+                        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=MmFtOXV0Z2g4ZXIzN2NndThrb2hrdHB2MmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F6BF26" styles={{border:"solid 1px #777", paddingTop:"10px"}} width="100%" height="400" frameborder="0" scrolling="no"></iframe>
                       </CardContent>
                     </Widget3>
                   </Grid>

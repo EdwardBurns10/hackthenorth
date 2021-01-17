@@ -8,8 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullcalendar/core": "^5.5.1",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/react": "^5.5.0",
+    "@fullcalendar/timegrid": "^5.5.1",
     "@material-ui/core": "^4.11.2",
     "bootstrap": "^4.5.3",
+    "daypilot-pro-react": "https://npm.daypilot.org/daypilot-pro-react/trial/2021.1.4833.tar.gz",
+    "fullcalendar": "^5.0.0-beta.2",
     "material-ui": "^1.0.0-beta.47",
     "moment": "^2.29.1",
     "next": "10.0.5",
