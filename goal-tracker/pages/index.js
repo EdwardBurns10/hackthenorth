@@ -3,11 +3,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
 import { TextField, Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
-import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Editable from '../editable'
 import { StylesProvider } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
 
 const Content = styled.div`
   && {
