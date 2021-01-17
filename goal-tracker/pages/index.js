@@ -7,7 +7,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 const Content = styled.div`
   && {
-    padding: 0 3% 0 3%;
+    margin: 0 3% 0 3%;
   }
 `
 const Name = styled.h2`
@@ -35,7 +35,7 @@ const Header = styled.div`
 `
 const Headerline = styled.hr`
   && {
-    width: 100%;
+    //width: 100%;
     margin-bottom: 20px;
     border: 1px solid #F2F2F2;
   }
@@ -136,7 +136,7 @@ const ProgressDiv = styled.div`
   && {
     text-align: left;
     background-color: white;
-    padding: 5px 5px 5px 5px;
+    padding: 2px 10px 10px 10px;
     margin: 10px 0;
     border-radius: 5px;
   }
@@ -154,16 +154,18 @@ const Progress = styled(LinearProgress)`
     }
   }
 `
-const PrimaryGoal = styled.body`
+const PrimaryGoal = styled.text`
   && {
     color: #FF9900;
+    //margin-left: 0px;
     font-size: 12px;
     margin-bottom: 2px;
   }
 `
-const SecondaryGoal = styled.body`
+const SecondaryGoal = styled.text`
   && {
     color: #8673FF;
+    //margin-left: 0px;
     font-size: 12px;
     margin-bottom: 2px;
   }
