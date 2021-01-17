@@ -1,9 +1,16 @@
+import React from "react";
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
-import { Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
+import { Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { Calendar as BigCalendar, momentLocalizer } from "react-big-calendar";
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { render } from 'react-dom';
+
+const localizer = momentLocalizer(moment);
 
 const Content = styled.div`
   && {
@@ -154,6 +161,25 @@ const Progress = styled(LinearProgress)`
     }
   }
 `
+const SliderBar = styled(Slider)`
+  && {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #F2F2F2;
+    track: white;
+    :&MuiSlider: {
+        thumb:{
+        color: "yellow",
+        },
+        track: {
+          color: 'red'
+        },
+        rail: {
+          color: 'black'
+        }
+      }
+  }
+`
 const PrimaryGoal = styled.text`
   && {
     color: #FF9900;
@@ -169,6 +195,12 @@ const SecondaryGoal = styled.text`
   }
 `
 const Home = () => {
+
+  const [value, setValue] = React.useState(30);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <Content>
       <StylesProvider injectFirst>
@@ -232,18 +264,15 @@ const Home = () => {
                   <h4>YEARLY GOALS</h4>
                   <ProgressDiv>
                     <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Progress variant="determinate" value={22} />
-                    <span>22%</span>
+                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 2</SecondaryGoal>
-                    <Progress variant="determinate" value={50} />
-                    <span>50%</span>
+                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 1</SecondaryGoal>
-                    <Progress variant="determinate" value={60} />
-                    <span>60%</span>
+                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
@@ -263,18 +292,15 @@ const Home = () => {
                       <h4>QUARTERLY GOALS</h4>
                       <ProgressDiv>
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Progress variant="determinate" value={76} />
-                        <span>76%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Progress variant="determinate" value={88} />
-                        <span>88%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Progress variant="determinate" value={50} />
-                        <span>50%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -286,18 +312,15 @@ const Home = () => {
                       <h4>MONTHLY GOALS</h4>
                       <ProgressDiv>                    
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Progress variant="determinate" value={12} />
-                        <span>12%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Progress variant="determinate" value={20} />
-                        <span>20%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Progress variant="determinate" value={90} />
-                        <span>90%</span>
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
