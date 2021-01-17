@@ -43,11 +43,11 @@ const Headerline = styled.hr`
 const Widget1 = styled(Card)`
   && {
     width: 100%;
-    //min-height: 20vh;
     text-align: center;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding: 0 5px 0 5px;
+    margin: 3px 0px 3px 0px;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    //padding: 0 5px 0 5px;
     h3 {
       margin-top: 0px;
       font-size: 18px;
@@ -70,9 +70,9 @@ const Widget2 = styled(Card)`
     width: 100%;
     min-height: 55vh;
     text-align: center;
-    margin-top: 14px;
-    margin-bottom: 3px;
-    padding: 0 5px 0 5px;
+    margin: 3px 0px 3px 0px;
+    //padding: 0 5px 0 5px;
+    margin-top: 15px;
     h3 {
       margin-top: 0px;
       font-size: 18px;
@@ -95,10 +95,8 @@ const Widget3 = styled(Card)`
     min-height: 55vh;
     text-align: center;
     margin-top: 4px;
-    margin-bottom: 3px;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding: 0 5px 0 5px;
+    margin: 3px 12px 3px 12px;
+    //padding: 0 5px 0 5px;
     h3 {
       margin-top: 0px;
       font-size: 18px;
@@ -139,7 +137,7 @@ const ProgressDiv = styled.div`
   && {
     text-align: left;
     background-color: white;
-    padding: 10px;
+    padding: 5px 5px 5px 5px;
     margin: 10px 0;
     border-radius: 5px;
     width: 100%;
@@ -149,6 +147,7 @@ const Progress = styled(LinearProgress)`
   && {
     width: 80%;
     display: inline-block;
+    margin-left: 10px;
     margin-right: 10px;
     background-color: #F2F2F2;
     color: white;
@@ -161,14 +160,14 @@ const PrimaryGoal = styled.body`
   && {
     color: #FF9900;
     font-size: 12px;
-    padding-bottom: 5px;
+    margin-bottom: 2px;
   }
 `
 const SecondaryGoal = styled.body`
   && {
     color: #8673FF;
     font-size: 12px;
-    padding-bottom: 5px;
+    margin-bottom: 2px;
   }
 `
 const Home = () => {
@@ -188,7 +187,7 @@ const Home = () => {
       </Header>
       <Headerline></Headerline>
         <div>
-          <Grid container direction="row" justify="center" alignItems="top" spacing={2}>
+          <Grid container direction="row" justify="center" alignItems="baseline" spacing={3}>
             <Grid item xs={3}>
               <Widget1 style={{ backgroundColor: "#F2F2F2"}}>
                 <CardContent>
@@ -258,7 +257,7 @@ const Home = () => {
               </Widget2>
             </Grid>
             <Grid item xs={6}>
-              <Grid container direction="row" justify="center" alignItems="top" spacing={2}>
+              <Grid container direction="row" justify="center" alignItems="baseline" spacing={3}>
                 <Grid item xs={6}>
                   <Widget1 style={{ backgroundColor: "#F2F2F2" }}>
                     <CardContent>
@@ -305,7 +304,7 @@ const Home = () => {
                     </CardContent>
                   </Widget1>
                 </Grid>
-                <Grid container direction="row" justify="center" alignItems="top" spacing={0}>
+                <Grid container direction="row" justify="flex-end" alignItems="baseline" spacing={3}>
                   <Grid item xs={12}>
                     <Widget3 style={{ backgroundColor: "#F2F2F2" }}>
                       <CardContent>
