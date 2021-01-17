@@ -6,7 +6,6 @@ import { TextField, Container, Grid, Card, CardContent, Typography, Slider } fro
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Editable from '../editable'
-import { Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
