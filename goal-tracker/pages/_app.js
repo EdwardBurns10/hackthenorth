@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-//import '../styles/globals.css'
 import { createGlobalStyle } from 'styled-components'
 import "../fonts.css";
 
@@ -26,12 +24,6 @@ const GlobalStyle = createGlobalStyle`
         padding-top: 15px;
     }
 `
-=======
-import '../styles/globals.css'
-import React from 'react';
-
-
->>>>>>> 7647e6d3af7553483978f402866850ebf78471a2
 
 function MyApp({ Component, pageProps }) {
   return (
