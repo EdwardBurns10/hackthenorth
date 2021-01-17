@@ -199,11 +199,13 @@ const Home = () => {
   const [value1, setValue1] = React.useState(30);
   const [value2, setValue2] = React.useState(10);
   const [value3, setValue3] = React.useState(0);
-  const [value, setValue] = React.useState(0);
+  const [value4, setValue4] = React.useState(0);
+  const [value5, setValue5] = React.useState(100);
+  const [value6, setValue6] = React.useState(0);
+  const [value7, setValue7] = React.useState(50);
+  const [value8, setValue8] = React.useState(0);
+  const [value9, setValue9] = React.useState(20);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
@@ -215,6 +217,30 @@ const Home = () => {
 
   const handleChange3 = (event, newValue) => {
     setValue3(newValue);
+  };
+
+  const handleChange4 = (event, newValue) => {
+    setValue4(newValue);
+  };
+
+  const handleChange5 = (event, newValue) => {
+    setValue5(newValue);
+  };
+
+  const handleChange6 = (event, newValue) => {
+    setValue6(newValue);
+  };
+
+  const handleChange7 = (event, newValue) => {
+    setValue7(newValue);
+  };
+
+  const handleChange8 = (event, newValue) => {
+    setValue8(newValue);
+  };
+
+  const handleChange9 = (event, newValue) => {
+    setValue9(newValue);
   };
 
   return (
@@ -280,15 +306,15 @@ const Home = () => {
                   <h4>YEARLY GOALS</h4>
                   <ProgressDiv>
                     <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                    <Slider value={value1} onChange={handleChange1} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 2</SecondaryGoal>
-                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                    <Slider value={value2} onChange={handleChange2} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 3</SecondaryGoal>
-                    <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                    <Slider value={value3} onChange={handleChange3} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
@@ -308,15 +334,15 @@ const Home = () => {
                       <h4>QUARTERLY GOALS</h4>
                       <ProgressDiv>
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider value={value1} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value4} onChange={handleChange4} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider value={value2} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value5} onChange={handleChange5} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider value={value3} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value6} onChange={handleChange6} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -328,15 +354,15 @@ const Home = () => {
                       <h4>MONTHLY GOALS</h4>
                       <ProgressDiv>                    
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value7} onChange={handleChange7} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value8} onChange={handleChange8} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
+                        <Slider value={value9} onChange={handleChange9} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
