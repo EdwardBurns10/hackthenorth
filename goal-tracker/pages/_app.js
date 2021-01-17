@@ -1,4 +1,3 @@
-//import '../styles/globals.css'
 import { createGlobalStyle } from 'styled-components'
 import "../fonts.css";
 
