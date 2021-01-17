@@ -2,10 +2,15 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {Button, Container, Grid, Card, CardContent, Typography } from '@material-ui/core'
 import React, {useState} from "react";
+import useSWR from 'swr';
 
-const Home = ({data}) => {
-    const [results, setResults] = useState(data);
+const fetcher = (url) => fetch(url).then((r) => r.json());
 
+const Home = () => {
+
+    const { data, error } = useSWR('/api/dailyTasks', fetcher);
+    console.log('yo')
+    console.log(data)
     let ummmm='test';
 
 console.log('hello')
@@ -16,7 +21,7 @@ console.log('hello')
 
   return (
       <div className={styles.container}>
-          {console.log(results)}
+
       </div>
   )
 
