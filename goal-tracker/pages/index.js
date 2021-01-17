@@ -3,10 +3,38 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
 import { Button, TextField, Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
-import { StylesProvider } from '@material-ui/core/styles';
+import { StylesProvider, makeStyles  } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Editable from '../editable'
 import Link from 'next/link'
+
+
+
+const useStyles = makeStyles((theme) => ({
+  todoList: {
+    textAlign:'left',
+  backgroundColor: 'transparent',
+    color:'#8673FF',
+  borderRadius: '4px',
+  maxWidth: '400px',
+  padding: '5px'
+  },
+    todo :{
+      textAlign:'left',
+  alignItems: 'left',
+  background: '#fff', 
+  color:'#8673FF',
+  backgroundColor:'8673FF',
+  borderRadius: '3px',
+  boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.15)',
+  display: 'flex',
+  fontSize: '12px',
+  justifySontent: 'space-between',
+  marginBottom: '6px',
+  padding: '3px 10px'
+}
+    }
+))
 
 const Content = styled.div`
   && {
@@ -211,10 +239,66 @@ const InputField = styled(TextField)`
       }
   }
 `
+
+
+
+function Todo({ todo, index, completeTodo, removeTodo }) {
+  return (
+      <div
+          className="todo"
+          style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+      >
+        {todo.text} 
+       
+        <div style={{marginTop:'5px',marginBottom:'5px'}}>
+          <button onClick={() => completeTodo(index)}>Done</button><button style={{color:'8673FF'}} onClick={() => removeTodo(index)}>x</button>
+        </div>
+      </div>
+  );
+}
+
+function TodoForm({ addTodo }) {
+  const [value, setValue] = React.useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!value) return;
+    addTodo(value);
+    setValue("");
+  };
+
+  return (
+      <form onSubmit={handleSubmit}>
+        <input
+            type="text"
+            className="input"
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            style={{marginTop:'20px'}}
+        />
+      </form>
+  );
+}
+
+
 const Home = () => {
 
+  const classes = useStyles();
+  
   const [task, setTask] = useState("");
 
+  
+  const [todos, setTodos] = React.useState([
+    {
+      text: "Drink Water :)",
+      isCompleted: false
+    },
+    {
+      text: "Meet friend for lunch",
+      isCompleted: false
+    }
+  ]);
+  
   const [value1, setValue1] = React.useState(30);
   const [value2, setValue2] = React.useState(10);
   const [value3, setValue3] = React.useState(0);
@@ -370,6 +454,21 @@ const Home = () => {
                 <CardContent>
                   <h3>today's tasks</h3>
                   <h4>DAILY TO-DO'S</h4>
+                    <div className="app">
+                    <div className={classes.todoList}>
+                      {todos.map((todo, index) => (
+                          <Todo
+                              key={index}
+                              index={index}
+                              todo={todo}
+                              completeTodo={completeTodo}
+                              removeTodo={removeTodo}
+                              className={classes.todo}
+                          />
+                      ))}
+                      <TodoForm addTodo={addTodo} />
+                    </div>
+                  </div>
                 </CardContent>
               </Widget2>
             </Grid>
