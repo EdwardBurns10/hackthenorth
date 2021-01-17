@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from "styled-components"
-import { Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
+import { TextField, Container, Grid, Card, CardContent, Typography, Slider } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-//import {DayPilot, DayPilotCalendar} from "daypilot-pro-react";
+import Editable from '../editable'
 
 const Content = styled.div`
   && {
@@ -190,7 +190,19 @@ const SecondaryGoal = styled.text`
     margin-bottom: 2px;
   }
 `
+const InputField = styled(TextField)`
+  && {
+      &.focused fieldset {
+        border: 2px solid #6EB257;
+      }
+      .MuiOutlinedInput-root.Mui-focused fieldset {
+        border: 2px solid #8A8A8A;
+      }
+  }
+`
 const Home = () => {
+
+  const [task, setTask] = useState("");
 
   const [value1, setValue1] = React.useState(30);
   const [value2, setValue2] = React.useState(10);
@@ -201,7 +213,6 @@ const Home = () => {
   const [value7, setValue7] = React.useState(50);
   const [value8, setValue8] = React.useState(0);
   const [value9, setValue9] = React.useState(20);
-
 
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
@@ -262,7 +273,30 @@ const Home = () => {
               <Widget1 style={{ backgroundColor: "#F2F2F2"}}>
                 <CardContent>
                   <h3>personal mission</h3>
-                  <p>brief powerful statement that inspires and guides you on your path through life.</p>
+                  {/* <p>brief powerful statement that inspires and guides you on your path through life.</p> */}
+                  <Editable
+                    style={{color: "#8A8A8A", fontSize: "18px", paddingTop:"10px"}}
+                    text={task}
+                    placeholder="brief powerful statement that inspires and guides you on your path through life."
+                    type="input"
+                    >
+                    <input
+                        style={{borderRadius:"5px", color: "#8A8A8A", fontSize: "18px", paddingTop:"5px", paddingBottom:"5px"}}
+                        type="text"
+                        name="task"
+                        placeholder="Your personal mission"
+                        value={task}
+                        onChange={e => setTask(e.target.value)}
+                        onclick="this.style.color='white'"
+                        InputProps={{
+                            style: {
+                                ":focus": "white",
+                                color: "white",
+                                borderRadius: "30px"
+                            }
+                        }}
+                    />
+                </Editable>
                 </CardContent>
               </Widget1>
               <Widget2 style={{ backgroundColor: "#F2F2F2" }}>
@@ -304,7 +338,7 @@ const Home = () => {
                   <h4>YEARLY GOALS</h4>
                   <ProgressDiv>
                     <PrimaryGoal>goal number 1</PrimaryGoal>
-                    <Slider style={{color: "#8A8A8A"}} value={value1} onChange={handleChange1} aria-labelledby="continuous-slider" />
+                    <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value1} onChange={handleChange1} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 2</SecondaryGoal>
@@ -312,7 +346,7 @@ const Home = () => {
                   </ProgressDiv>
                   <ProgressDiv>
                     <SecondaryGoal>goal number 3</SecondaryGoal>
-                    <Slider style={{color: "#8A8A8A"}} value={value3} onChange={handleChange3} aria-labelledby="continuous-slider" />
+                    <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value3} onChange={handleChange3} aria-labelledby="continuous-slider" />
                   </ProgressDiv>
                 </CardContent>
               </Widget1>
@@ -332,15 +366,15 @@ const Home = () => {
                       <h4>QUARTERLY GOALS</h4>
                       <ProgressDiv>
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value4} onChange={handleChange4} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value4} onChange={handleChange4} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value5} onChange={handleChange5} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value5} onChange={handleChange5} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value6} onChange={handleChange6} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value6} onChange={handleChange6} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
@@ -352,15 +386,15 @@ const Home = () => {
                       <h4>MONTHLY GOALS</h4>
                       <ProgressDiv>                    
                         <PrimaryGoal>goal number 1</PrimaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value7} onChange={handleChange7} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value7} onChange={handleChange7} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 2</SecondaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value8} onChange={handleChange8} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value8} onChange={handleChange8} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                       <ProgressDiv>
                         <SecondaryGoal>goal number 3</SecondaryGoal>
-                        <Slider style={{color: "#8A8A8A"}} value={value9} onChange={handleChange9} aria-labelledby="continuous-slider" />
+                        <Slider valueLabelDisplay="auto" style={{color: "#8A8A8A"}} value={value9} onChange={handleChange9} aria-labelledby="continuous-slider" />
                       </ProgressDiv>
                     </CardContent>
                   </Widget1>
