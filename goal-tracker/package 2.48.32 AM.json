@@ -8,12 +8,26 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@material-ui/core": "^4.11.2",
     "bootstrap": "^4.5.3",
+=======
+    "isomorphic-unfetch": "^3.1.0",
+    "mongodb": "^3.6.3",
+>>>>>>> 7647e6d3af7553483978f402866850ebf78471a2
     "next": "10.0.5",
+    "next-connect": "^0.9.1",
     "react": "17.0.1",
+<<<<<<< HEAD
     "react-bootstrap": "^1.4.3",
     "react-dom": "17.0.1",
     "styled-components": "^5.2.1"
+=======
+    "react-dom": "17.0.1",
+    "swr": "^0.4.0"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.11.2"
+>>>>>>> 7647e6d3af7553483978f402866850ebf78471a2
   }
 }
